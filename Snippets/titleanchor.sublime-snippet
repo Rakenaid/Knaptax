@@ -1,0 +1,10 @@
+<snippet>
+    <content>
+    <![CDATA[[anchor=${1:AnchorName}]${2:$TEXT}[/anchor]]]>
+    </content>
+    <tabTrigger>anchortitle</tabTrigger>
+    <scope>source.ipsbbcode</scope>
+    <description>Title w/ Anchor</description>
+</snippet>
+
+

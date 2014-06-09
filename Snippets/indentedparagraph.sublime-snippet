@@ -1,0 +1,8 @@
+<snippet>
+    <content>
+      <![CDATA[[indent][b][size=5]${1:paragraphtext}[/size][/b][/indent]]]>
+    </content>
+    <tabTrigger>indentparagraph</tabTrigger>
+    <scope>source.ipsbbcode</scope>
+    <description>Indented Paragraph</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+    <content>
+      <![CDATA[[center][color=blue][size=5][b]${1:$IMG_LINK}[/b][/size][/color][/center]]]>
+    </content>
+    <tabTrigger>header2blue</tabTrigger>
+    <scope>source.ipsbbcode</scope>
+    <description>Header 2 Blue</description>
+</snippet>

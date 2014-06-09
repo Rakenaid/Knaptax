@@ -1,0 +1,8 @@
+<snippet>
+    <content>
+      <![CDATA[[gt]${1:IP:PORT}[/gt]]]>
+    </content>
+    <tabTrigger>gametracker</tabTrigger>
+    <scope>source.ipsbbcode</scope>
+    <description>Game Tracker</description>
+</snippet>

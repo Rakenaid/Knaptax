@@ -1,0 +1,8 @@
+<snippet>
+    <content>
+      <![CDATA[Left 4 Dead 2 ]]>
+    </content>
+    <tabTrigger>l4d2</tabTrigger>
+    <scope>source.ipsbbcode</scope>
+    <description>Left 4 Dead 2</description>
+</snippet>

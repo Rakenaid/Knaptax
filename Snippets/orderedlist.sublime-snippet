@@ -1,0 +1,11 @@
+<snippet>
+    <content>
+      <![CDATA[
+[list=1]
+[*]${1:$FIRST_ITEM}
+[/list]]]>
+    </content>
+    <tabTrigger>orderedlist</tabTrigger>
+    <scope>source.ipsbbcode</scope>
+    <description>Ordered List</description>
+</snippet>

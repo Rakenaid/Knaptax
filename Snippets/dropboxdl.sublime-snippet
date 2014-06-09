@@ -1,0 +1,8 @@
+<snippet>
+    <content>
+      <![CDATA[[center][url=${1:$FILE_LINK}][img=http://i202.photobucket.com/albums/aa60/dmknappy/dropbox.png][/url][/center]]]>
+    </content>
+    <tabTrigger>dropbox</tabTrigger>
+    <scope>source.ipsbbcode</scope>
+    <description>Dropbox Pic w/ Embed File</description>
+</snippet>

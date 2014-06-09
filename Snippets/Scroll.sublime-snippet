@@ -1,0 +1,8 @@
+<snippet>
+    <content>
+      <![CDATA[[scroll=${1:$UP|DOWN|LEFT|RIGHT}]${2:$TEXT}[/scroll]]]>
+    </content>
+    <tabTrigger>scroll</tabTrigger>
+    <scope>source.ipsbbcode</scope>
+    <description>Scroll</description>
+</snippet>

@@ -1,0 +1,18 @@
+{
+	"extensions":
+	[
+		"bbcode"
+	],
+	"trim_trailing_white_space_on_save": false,
+	"font_face": "Consolas",  // Best with a font that has real bold & italics!
+	"font_size": 15,
+	"color_scheme": "Packages/Knaptax/Knaptax.tmTheme",
+	"translate_tabs_to_spaces": true,
+	"word_wrap": true,
+	"wrap_width": 125,
+	"draw_centered": false,
+	"auto_match_enabled": true,
+	"caret_style": "wide",
+	"line_padding_top": 1,
+	"highlight_line": false
+}

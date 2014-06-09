@@ -1,0 +1,8 @@
+<snippet>
+    <content>
+      <![CDATA[[b][size=5]${1:paragraphtext}[/size][/b]]]>
+    </content>
+    <tabTrigger>paragraph</tabTrigger>
+    <scope>source.ipsbbcode</scope>
+    <description>Paragraph</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+    <content>
+      <![CDATA[[iurl=#${1:AnchorName}]${2:$TEXT}[/iurl]]]>
+    </content>
+    <tabTrigger>iurlanchor</tabTrigger>
+    <scope>source.ipsbbcode</scope>
+    <description>GoTo Anchor</description>
+</snippet>

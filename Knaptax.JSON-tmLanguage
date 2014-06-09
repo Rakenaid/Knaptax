@@ -1,0 +1,1110 @@
+{
+    "foldingStartMarker": "\\[[^/][^\\]]+\\]", 
+    "name": "IPS BBCode", 
+    "scopeName": "source.ipsbbcode", 
+    "patterns": [
+        {
+            "captures": {
+                "1": {
+                    "name": "bold.tag"
+                }, 
+                "3": {
+                    "name": "bold.tag"
+                }, 
+                "2": {
+                    "name": "markup.bold"
+                }
+            }, 
+            "match": "(\\[[B|b]\\])(\\w.*)(\\[/[B|b]\\])"
+        }, 
+        {}, 
+        {
+            "captures": {
+                "1": {
+                    "name": "double.tag.error"
+                }
+            }, 
+            "match": "(\\[b]\\[b])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "whitespace.tag.pass"
+                }, 
+                "3": {
+                    "name": "whitespace.tag.error"
+                }, 
+                "2": {
+                    "name": "whitespace.tag.error"
+                }
+            }, 
+            "match": "(\\])(\\])(\\1*)"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "whitespace.tag.pass"
+                }, 
+                "3": {
+                    "name": "whitespace.tag.error"
+                }, 
+                "2": {
+                    "name": "whitespace.tag.error"
+                }
+            }, 
+            "match": "(\\[)(\\[)(\\1*)"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "whitespace.tag.pass"
+                }, 
+                "3": {
+                    "name": "whitespace.tag.pass"
+                }, 
+                "2": {
+                    "name": "whitespace.tag.error"
+                }, 
+                "5": {
+                    "name": "whitespace.tag.pass"
+                }, 
+                "4": {
+                    "name": "whitespace.tag.error"
+                }
+            }, 
+            "match": "(\\[.)(\\s+)(.*?)(\\s+)(\\])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "whitespace.tag.pass"
+                }, 
+                "2": {
+                    "name": "whitespace.tag.error"
+                }
+            }, 
+            "match": "(\\/[a-zA-Z0-9])(\\s+)"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "whitespace.tag.pass"
+                }, 
+                "3": {
+                    "name": "whitespace.tag.pass"
+                }, 
+                "2": {
+                    "name": "whitespace.tag.error"
+                }
+            }, 
+            "match": "(\\[)(\\s+)(\\/)"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "whitespace.tag.pass"
+                }, 
+                "3": {
+                    "name": "whitespace.tag.pass"
+                }, 
+                "2": {
+                    "name": "whitespace.tag.error"
+                }, 
+                "5": {
+                    "name": "whitespace.tag.pass"
+                }, 
+                "4": {
+                    "name": "whitespace.tag.error"
+                }
+            }, 
+            "match": ""
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "bold.italic.tag"
+                }, 
+                "3": {
+                    "name": "bold.italic.text"
+                }, 
+                "2": {
+                    "name": "bold.italic.tag"
+                }, 
+                "5": {
+                    "name": "bold.italic.tag"
+                }, 
+                "4": {
+                    "name": "bold.italic.tag"
+                }
+            }, 
+            "match": "(\\[[B|b]\\])(\\[[I|i]\\])([a-zA-Z0-9].*)(\\[/[i|I]])(\\[/[B|b]])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "list.bracket"
+                }, 
+                "3": {
+                    "name": "list.bracket"
+                }, 
+                "2": {
+                    "name": "list.marker"
+                }
+            }, 
+            "match": "(\\[)(\\*)(\\])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "list.bracket"
+                }, 
+                "3": {
+                    "name": "list.bracket"
+                }, 
+                "2": {
+                    "name": "list.marker"
+                }
+            }, 
+            "match": "(\\[)(\\blist)(])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "list.bracket"
+                }, 
+                "3": {
+                    "name": "list.bracket"
+                }, 
+                "2": {
+                    "name": "list.marker"
+                }
+            }, 
+            "match": "(\\[)(\\/\\blist)(])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "list.bracket"
+                }, 
+                "3": {
+                    "name": "set.operator"
+                }, 
+                "2": {
+                    "name": "list.marker"
+                }, 
+                "5": {
+                    "name": "list.bracket"
+                }, 
+                "4": {
+                    "name": "number"
+                }
+            }, 
+            "match": "(\\[)(\\blist)(=)(\\d)(])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "gt.tag"
+                }, 
+                "3": {
+                    "name": "port.protocol"
+                }, 
+                "2": {
+                    "name": "ip.address"
+                }, 
+                "5": {
+                    "name": "gt.tag"
+                }, 
+                "4": {
+                    "name": "port.address"
+                }
+            }, 
+            "match": "(\\[gt])(\\d.*)(\\:)(\\d.*)(\\[/gt])"
+        }, 
+        {
+            "captures": {
+                "11": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "10": {
+                    "name": "bold.italic.tag"
+                }, 
+                "12": {
+                    "name": "indent.tag"
+                }, 
+                "1": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "3": {
+                    "name": "set.operator"
+                }, 
+                "2": {
+                    "name": "indent.tag"
+                }, 
+                "5": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "4": {
+                    "name": "number"
+                }, 
+                "7": {
+                    "name": "bold.italic.tag"
+                }, 
+                "6": {
+                    "name": "bold.italic.tag"
+                }, 
+                "9": {
+                    "name": "bold.italic.tag"
+                }, 
+                "8": {
+                    "name": "bold.italic.text"
+                }
+            }, 
+            "match": "(\\[)(indent)(=)(\\d*)(\\])(\\[[B|b]\\])(\\[[I|i]\\])([a-zA-Z0-9].*)(\\[/[i|I]])(\\[/[B|b]])(\\[)(/indent])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "indent.tag"
+                }, 
+                "3": {
+                    "name": "number"
+                }, 
+                "2": {
+                    "name": "set.operator"
+                }, 
+                "5": {
+                    "name": "italic.tag"
+                }, 
+                "4": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "7": {
+                    "name": "italic.tag"
+                }, 
+                "6": {
+                    "name": "markup.italic"
+                }, 
+                "8": {
+                    "name": "indent.tag"
+                }
+            }, 
+            "match": "(\\[indent)(=)(\\d*)(\\])(\\[[I|i]])([A-Za-z0-9].*)(\\[/[I|i]])(\\[/indent])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "indent.tag"
+                }, 
+                "3": {
+                    "name": "number"
+                }, 
+                "2": {
+                    "name": "set.operator"
+                }, 
+                "5": {
+                    "name": "bold.tag"
+                }, 
+                "4": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "7": {
+                    "name": "bold.tag"
+                }, 
+                "6": {
+                    "name": "markup.bold"
+                }, 
+                "8": {
+                    "name": "indent.tag"
+                }
+            }, 
+            "match": "(\\[indent)(=)(\\d*)(\\])(\\[b])([A-Za-z0-9].*)(\\[\\/b])(\\[/indent])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "indent.tag"
+                }, 
+                "3": {
+                    "name": "set.operator"
+                }, 
+                "2": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "5": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "4": {
+                    "name": "number"
+                }, 
+                "7": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "6": {
+                    "name": ""
+                }, 
+                "9": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "8": {
+                    "name": "indent.tag"
+                }
+            }, 
+            "match": "(\\[)(indent)(=)(\\d*)(\\])([A-z].*)(\\[/)(indent)(])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "indent.tag"
+                }, 
+                "3": {
+                    "name": "number"
+                }, 
+                "2": {
+                    "name": "set.operator"
+                }, 
+                "5": {
+                    "name": "italic.txt"
+                }, 
+                "4": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "6": {
+                    "name": "meta.tag.any.bbcode"
+                }
+            }, 
+            "match": "(\\[indent)(=)(\\d*)(\\])(\\[i][A-z].*\\[\\/i])(\\[/indent])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "indent.tag"
+                }, 
+                "3": {
+                    "name": "number"
+                }, 
+                "2": {
+                    "name": "set.operator"
+                }, 
+                "5": {
+                    "name": "bold.tag"
+                }, 
+                "4": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "7": {
+                    "name": "bold.tag"
+                }, 
+                "6": {
+                    "name": "markup.bold"
+                }, 
+                "8": {
+                    "name": "indent.tag"
+                }
+            }, 
+            "match": "(\\[indent)(=)(\\d*)(\\])(\\[[B|b]])([A-zA-Z0-9].*)(\\[/[B|b]])(\\[/indent])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "indent.tag"
+                }, 
+                "3": {
+                    "name": "number"
+                }, 
+                "2": {
+                    "name": "set.operator"
+                }, 
+                "5": {
+                    "name": "italic.tag"
+                }, 
+                "4": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "7": {
+                    "name": "italic.tag"
+                }, 
+                "6": {
+                    "name": "markup.italic"
+                }, 
+                "8": {
+                    "name": "indent.tag"
+                }
+            }, 
+            "match": "(\\[indent)(=)(\\d*)(\\])(\\[i])([A-z].*)(\\[\\/i])(\\[/indent])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "3": {
+                    "name": "number"
+                }, 
+                "2": {
+                    "name": "set.operator"
+                }, 
+                "5": {
+                    "name": ""
+                }, 
+                "4": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "6": {
+                    "name": "meta.tag.any.bbcode"
+                }
+            }, 
+            "match": "(\\[size)(=)(\\d*)(\\])([A-Za-z0-9].*)(\\[/size])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "3": {
+                    "name": "set.operator"
+                }, 
+                "2": {
+                    "name": "indent.tag"
+                }, 
+                "5": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "4": {
+                    "name": "number"
+                }, 
+                "7": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "6": {
+                    "name": "indent.tag"
+                }
+            }, 
+            "match": "(\\[)(indent)(=)(\\(\\bnumber\\))(]\\[)(/indent)(])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "anchor.bracket"
+                }, 
+                "3": {
+                    "name": "set.operator"
+                }, 
+                "2": {
+                    "name": "anchor.tag"
+                }, 
+                "5": {
+                    "name": "variable"
+                }, 
+                "4": {
+                    "name": "anchor.bracket"
+                }, 
+                "7": {
+                    "name": "anchor.bracket"
+                }, 
+                "6": {
+                    "name": "anchor.bracket"
+                }, 
+                "8": {
+                    "name": "anchor.bracket"
+                }
+            }, 
+            "match": "(\\[)(iurl)(=)(#)([a-zA-Z0-9].*)(\\[/)(iurl)(])"
+        }, 
+        {
+            "captures": {
+                "10": {
+                    "name": "anchor.bracket"
+                }, 
+                "1": {
+                    "name": "anchor.bracket"
+                }, 
+                "3": {
+                    "name": "set.operator"
+                }, 
+                "2": {
+                    "name": "anchor.tag"
+                }, 
+                "5": {
+                    "name": "iurl.txt"
+                }, 
+                "4": {
+                    "name": "anchor.bracket"
+                }, 
+                "7": {
+                    "name": ""
+                }, 
+                "6": {
+                    "name": "anchor.bracket"
+                }, 
+                "9": {
+                    "name": "anchor.tag"
+                }, 
+                "8": {
+                    "name": "anchor.bracket"
+                }
+            }, 
+            "match": "(\\[)(iurl)(=)(#)([a-zA-Z0-9].*)(\\])(.*?)(\\[)(/iurl)(])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "anchor.bracket"
+                }, 
+                "3": {
+                    "name": "set.operator"
+                }, 
+                "2": {
+                    "name": "anchor.tag"
+                }, 
+                "5": {
+                    "name": "anchor.bracket"
+                }, 
+                "4": {
+                    "name": "iurl.txt"
+                }, 
+                "7": {
+                    "name": "anchor.tag"
+                }, 
+                "6": {
+                    "name": ""
+                }, 
+                "9": {
+                    "name": "anchor.bracket"
+                }, 
+                "8": {
+                    "name": "anchor.tag"
+                }
+            }, 
+            "match": "(\\[)(anchor)(=)([a-zA-Z0-9]*)(\\])([a-zA-Z0-9].*)(\\[/)(anchor)(\\])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "anchor.bracket"
+                }, 
+                "3": {
+                    "name": "set.operator"
+                }, 
+                "2": {
+                    "name": "anchor.tag"
+                }, 
+                "5": {
+                    "name": "anchor.bracket"
+                }, 
+                "4": {
+                    "name": "iurl.txt"
+                }, 
+                "7": {
+                    "name": "anchor.tag"
+                }, 
+                "6": {
+                    "name": ""
+                }, 
+                "9": {
+                    "name": "anchor.bracket"
+                }, 
+                "8": {
+                    "name": "anchor.tag"
+                }
+            }, 
+            "match": "(\\[)(anchor)(=)([a-zA-Z0-9]*)(\\])([a-zA-Z0-9].*)(\\[/)(anchor)(\\])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "anchor.bracket"
+                }, 
+                "3": {
+                    "name": "set.operator"
+                }, 
+                "2": {
+                    "name": "anchor.tag"
+                }, 
+                "5": {
+                    "name": "anchor.bracket"
+                }, 
+                "4": {
+                    "name": "number"
+                }, 
+                "7": {
+                    "name": "markup.italic"
+                }, 
+                "6": {
+                    "name": "italic.tag"
+                }, 
+                "9": {
+                    "name": "anchor.bracket"
+                }, 
+                "8": {
+                    "name": "italic.tag"
+                }
+            }, 
+            "match": "(\\[)(anchor)(=)([a-zA-Z0-9]*)(\\])(\\[[i|I]])([a-zA-Z0-9].*)(\\[/[[i|I]])(\\[/)(anchor)(\\])"
+        }, 
+        {
+            "captures": {
+                "11": {
+                    "name": "anchor.bracket"
+                }, 
+                "10": {
+                    "name": "anchor.tag"
+                }, 
+                "1": {
+                    "name": "anchor.bracket"
+                }, 
+                "3": {
+                    "name": "set.operator"
+                }, 
+                "2": {
+                    "name": "anchor.tag"
+                }, 
+                "5": {
+                    "name": "anchor.bracket"
+                }, 
+                "4": {
+                    "name": "number"
+                }, 
+                "7": {
+                    "name": "markup.bold"
+                }, 
+                "6": {
+                    "name": "bold.tag"
+                }, 
+                "9": {
+                    "name": "anchor.bracket"
+                }, 
+                "8": {
+                    "name": "bold.tag"
+                }
+            }, 
+            "match": "(\\[)(anchor)(=)([a-zA-Z0-9].*)(\\])(\\[b])([a-zA-Z0-9].*)(\\[/b])(\\[)(/anchor)(])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "italic.tag"
+                }, 
+                "3": {
+                    "name": "italic.tag"
+                }, 
+                "2": {
+                    "name": "italic.tag"
+                }
+            }, 
+            "match": "(\\[[I|i]\\])([a-zA-Z0-9].*)(\\[/[I|i]\\])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "3": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "2": {
+                    "name": "number"
+                }, 
+                "5": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "4": {
+                    "name": ""
+                }, 
+                "7": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "6": {
+                    "name": "number"
+                }
+            }, 
+            "match": "(\\W|^)(center|left|right)(\\W|$)([a-zA-Z0-9].*)(\\[/)(center|left|right)(\\W|$)"
+        }, 
+        {
+            "captures": {
+                "10": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "1": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "3": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "2": {
+                    "name": "number"
+                }, 
+                "5": {
+                    "name": "markup.bold"
+                }, 
+                "4": {
+                    "name": "bold.tag"
+                }, 
+                "7": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "6": {
+                    "name": "bold.tag"
+                }, 
+                "9": {
+                    "name": "number"
+                }, 
+                "8": {
+                    "name": "meta.tag.any.bbcode"
+                }
+            }, 
+            "match": "(\\W|^)(center|left|right)(\\W|$)(\\[[b|B]])([a-zA-Z0-9].*)(\\[/[b|B]])(\\W|^)(\\/)(center|left|right)(\\W|$)"
+        }, 
+        {
+            "captures": {
+                "10": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "1": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "3": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "2": {
+                    "name": "number"
+                }, 
+                "5": {
+                    "name": "markup.italic"
+                }, 
+                "4": {
+                    "name": "italic.tag"
+                }, 
+                "7": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "6": {
+                    "name": "italic.tag"
+                }, 
+                "9": {
+                    "name": "number"
+                }, 
+                "8": {
+                    "name": "meta.tag.any.bbcode"
+                }
+            }, 
+            "match": "(\\W|^)(center|left|right)(\\W|$)(\\[[i|I]])([a-zA-Z0-9].*)(\\[/[i|I]])(\\W|^)(\\/)(center|left|right)(\\W|$)"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "3": {
+                    "name": "set.operator"
+                }, 
+                "2": {
+                    "name": "url.tag"
+                }, 
+                "5": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "4": {
+                    "name": "hyperlink"
+                }, 
+                "7": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "6": {
+                    "name": "hyperlink.text"
+                }, 
+                "9": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "8": {
+                    "name": "url.tag"
+                }
+            }, 
+            "match": "(\\[)(url)(=)([a-zA-Z0-9].*)(])([a-zA-Z0-9].*)(\\[/)(\\url)(\\])"
+        }, 
+        {
+            "captures": {
+                "11": {
+                    "name": "bold.tag"
+                }, 
+                "10": {
+                    "name": "meta.bold"
+                }, 
+                "1": {
+                    "name": "bold.tag"
+                }, 
+                "3": {
+                    "name": "url.tag.bold"
+                }, 
+                "2": {
+                    "name": "meta.bold"
+                }, 
+                "5": {
+                    "name": "hyperlink.bold"
+                }, 
+                "4": {
+                    "name": "set.operator"
+                }, 
+                "7": {
+                    "name": "hyperlink.bold"
+                }, 
+                "6": {
+                    "name": "meta.bold"
+                }, 
+                "9": {
+                    "name": "url.tag"
+                }, 
+                "8": {
+                    "name": "meta.bold"
+                }
+            }, 
+            "match": "(\\[b])(\\[)(url)(=)([a-zA-Z0-9].*)(])([a-zA-Z0-9].*)(\\[/)(\\url)(\\])(\\[/b])"
+        }, 
+        {
+            "captures": {
+                "11": {
+                    "name": "number"
+                }, 
+                "10": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "12": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "1": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "3": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "2": {
+                    "name": "number"
+                }, 
+                "5": {
+                    "name": "bold.italic.tag"
+                }, 
+                "4": {
+                    "name": "bold.italic.tag"
+                }, 
+                "7": {
+                    "name": "bold.italic.tag"
+                }, 
+                "6": {
+                    "name": "bold.italic.text"
+                }, 
+                "9": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "8": {
+                    "name": "bold.italic.tag"
+                }
+            }, 
+            "match": "(\\W|^)(center|left|right)(\\W|$)(\\[[b|B]])(\\[[i|I]])([a-zA-Z0-9].*)(\\[/[i|I]])(\\[/[b|B]])(\\W|^)(\\/)(center|left|right)(\\W|$)"
+        }, 
+        {
+            "captures": {
+                "11": {
+                    "name": "number"
+                }, 
+                "10": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "12": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "1": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "3": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "2": {
+                    "name": "markup.bold"
+                }, 
+                "5": {
+                    "name": "bold.italic.tag"
+                }, 
+                "4": {
+                    "name": "bold.italic.tag"
+                }, 
+                "7": {
+                    "name": "bold.italic.tag"
+                }, 
+                "6": {
+                    "name": "number"
+                }, 
+                "9": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "8": {
+                    "name": "bold.italic.tag"
+                }
+            }, 
+            "match": "(\\W|^)(center|left|right)(\\W|$)(\\[[b|B]])(\\[[i|I]])([a-zA-Z0-9].*)(\\[/[[i|I]])(\\[/[[b|B]])(\\W|^)(\\/)(center|left|right)(\\W|$)"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "3": {
+                    "name": "markup.italic"
+                }, 
+                "2": {
+                    "name": "italic.tag"
+                }, 
+                "5": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "4": {
+                    "name": "italic.tag"
+                }
+            }, 
+            "match": ""
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "3": {
+                    "name": "markup.italic"
+                }, 
+                "2": {
+                    "name": "italic.tag"
+                }, 
+                "5": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "4": {
+                    "name": "italic.tag"
+                }
+            }, 
+            "match": ""
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "3": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "2": {
+                    "name": "markup.underline"
+                }
+            }, 
+            "match": "(\\[[U|u]\\])(.*?)(\\[/[U|u]\\])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "3": {
+                    "name": "red.variable"
+                }, 
+                "2": {
+                    "name": "set.operator"
+                }, 
+                "5": {
+                    "name": "red.txt"
+                }, 
+                "4": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "6": {
+                    "name": "meta.tag.any.bbcode"
+                }
+            }, 
+            "match": "(\\[color)(=)(red)(\\])(.*?)(\\[/color\\])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "3": {
+                    "name": "blue.variable"
+                }, 
+                "2": {
+                    "name": "set.operator"
+                }, 
+                "5": {
+                    "name": "blue.txt"
+                }, 
+                "4": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "6": {
+                    "name": "meta.tag.any.bbcode"
+                }
+            }, 
+            "match": "(\\[color)(=)(blue)(\\])(.*?)(\\[/color\\])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "3": {
+                    "name": "green.variable"
+                }, 
+                "2": {
+                    "name": "set.operator"
+                }, 
+                "5": {
+                    "name": "green.txt"
+                }, 
+                "4": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "6": {
+                    "name": "meta.tag.any.bbcode"
+                }
+            }, 
+            "match": "(\\[color)(=)(green)(\\])(.*?)(\\[/color\\])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "3": {
+                    "name": "green.txt"
+                }, 
+                "2": {
+                    "name": "operator"
+                }, 
+                "4": {
+                    "name": "meta.tag.any.bbcode"
+                }
+            }, 
+            "match": "(\\[color=green?(.*?)\\])(.*?)(\\[/color\\])"
+        }, 
+        {
+            "captures": {
+                "1": {
+                    "name": "meta.tag.any.bbcode"
+                }, 
+                "3": {
+                    "name": "markup.underline"
+                }, 
+                "2": {
+                    "name": "meta.tag.value.bbcode"
+                }, 
+                "4": {
+                    "name": "meta.tag.any.bbcode"
+                }
+            }, 
+            "match": "(\\[url=?(.*?)\\])(.*?)(\\[/url\\])"
+        }
+    ], 
+    "foldingStopMarker": "\\[/[^/\\]]+\\]", 
+    "fileTypes": [
+        "bbcode", 
+        "bb"
+    ], 
+    "keyEquivalent": "^~B", 
+    "uuid": "3bcbf77a-877d-417a-b4a1-8bb9b8c68157"
+}

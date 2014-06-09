@@ -1,0 +1,9 @@
+<snippet>
+    <content>
+      <![CDATA[
+[*]${1:$TEXT}]]>
+    </content>
+    <tabTrigger>l*</tabTrigger>
+    <scope>source.ipsbbcode</scope>
+    <description>New List Line</description>
+</snippet>
